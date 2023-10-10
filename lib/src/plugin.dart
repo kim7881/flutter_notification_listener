@@ -82,8 +82,9 @@ class NotificationsListener {
     bool foreground = true,
     String subTitle = "",
     bool showWhen = false,
-    String title = "Notification Listener",
-    String description = "Service is running",
+    String title = "",
+    String description = "",
+    bool ongoing = false,
   }) async {
     var data = {};
     data["foreground"] = foreground;
@@ -91,6 +92,7 @@ class NotificationsListener {
     data["showWhen"] = showWhen;
     data["title"] = title;
     data["description"] = description;
+    data["ongoing"] = ongoing;
 
     var res = await _methodChannel.invokeMethod('plugin.startService', data);
 
