@@ -16,12 +16,12 @@ class RebootBroadcastReceiver : BroadcastReceiver() {
                 Log.i("NotificationListener", "Registering notification listener, after reboot!")
                 FlutterNotificationListenerPlugin.registerAfterReboot(context)
 
-//                val intent = Intent(context, NotificationsHandlerService::class.java)
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-//                    context.startForegroundService(intent)
-//                } else {
-//                    context.startService(intent)
-//                }
+                val intent = Intent(context, NotificationsHandlerService::class.java)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    context.startForegroundService(intent)
+                } else {
+                    context.startService(intent)
+                }
 
             }
             else -> {
