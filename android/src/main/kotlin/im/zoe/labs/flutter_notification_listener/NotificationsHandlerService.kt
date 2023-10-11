@@ -32,7 +32,7 @@ import java.util.*
 import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.collections.HashMap
 
-class NotificationsHandlerService: MethodChannel.MethodCallHandler, NotificationListenerService() {
+open class NotificationsHandlerService: MethodChannel.MethodCallHandler, NotificationListenerService() {
     private val queue = ArrayDeque<NotificationEvent>()
     private lateinit var mBackgroundChannel: MethodChannel
     private lateinit var mContext: Context
