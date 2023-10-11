@@ -14,6 +14,7 @@ class RebootBroadcastReceiver : BroadcastReceiver() {
             Intent.ACTION_REBOOT, Intent.ACTION_BOOT_COMPLETED -> {
                 Log.i("NotificationListener", "Registering notification listener, after reboot!")
                 FlutterNotificationListenerPlugin.registerAfterReboot(context)
+                NotificationsHandlerService.updateFlutterEngine(context)
             }
             else -> {
                 Log.i("NotificationListener", intent.action.toString())

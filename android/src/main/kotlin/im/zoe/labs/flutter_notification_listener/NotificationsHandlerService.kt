@@ -211,7 +211,8 @@ class NotificationsHandlerService: MethodChannel.MethodCallHandler, Notification
         }
 
         // create a channel for notification
-        val channel = NotificationChannel(CHANNEL_ID, "Flutter Notifications Listener Plugin", NotificationManager.IMPORTANCE_HIGH)
+        val channel = NotificationChannel(CHANNEL_ID, "Flutter Notifications Listener Plugi" +
+                "n", NotificationManager.IMPORTANCE_HIGH)
         val imageId = resources.getIdentifier("ic_launcher", "mipmap", packageName)
         (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(channel)
 
