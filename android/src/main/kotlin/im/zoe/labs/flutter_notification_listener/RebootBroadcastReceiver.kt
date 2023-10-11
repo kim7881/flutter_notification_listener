@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.util.Log
+import android.os.Build
 
 
 class RebootBroadcastReceiver : BroadcastReceiver() {
